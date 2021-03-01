@@ -5,7 +5,7 @@ main: $(OBJS)
 
 LIBS := -lm -lpcl -lopencv
 LIBDIRS := -L/usr/local/lib -L/usr/local/lib/cv2
-LDFLAGS := $(LIBDIRS) $(LIBS) $(CFLAGS)
+LDFLAGS := $(LIBDIRS) $(LIBS) $(LDFLAGS)
 
 INCLUDE := -I/usr/local/include/opencv2 \
            -I/usr/local/include
