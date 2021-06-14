@@ -1,6 +1,6 @@
 FROM gcc
 
 RUN apt -y update \
- && apt -y install make gdb cppcheck
+    && apt -y install make gdb cppcheck
 
-WORKDIR /mnt
+WORKDIR /mnt/10_01_make
