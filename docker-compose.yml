@@ -4,9 +4,8 @@ services:
   mygcc:
     build: ./
     volumes:
-      - ../:/mnt
+      - ./:/mnt
     tty: true
-    working_dir: /mnt/10_01_make
     cap_add:
       - SYS_PTRACE
     security_opt:

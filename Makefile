@@ -10,7 +10,7 @@ LDFLAGS := $(LIBDIRS) $(LIBS) $(LDFLAGS)
 INCLUDE := -I/usr/local/include/opencv2 \
            -I/usr/local/include
 
-CFLAGS := $(INCLUDE)　$(CFLAGS)
+CFLAGS := $(INCLUDE) $(CFLAGS)
 
 %.o: %.c
 	gcc $(CFLAGS) -c $< -o $@
