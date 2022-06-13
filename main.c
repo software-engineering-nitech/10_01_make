@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include "opencv.h"
+#include "pcl.h"
 
 double mycompute(double, double);
 
