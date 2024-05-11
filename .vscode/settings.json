@@ -23,6 +23,14 @@
     "c-cpp-flylint.standard": [
         "c11"
     ],
+    "[c]": {
+        // "editor.defaultFormatter": "xaver.clang-format",
+        "editor.defaultFormatter": "ms-vscode.cpptools",
+    },
+    "[cpp]": {
+        // "editor.defaultFormatter": "xaver.clang-format",
+        "editor.defaultFormatter": "ms-vscode.cpptools",
+    },
     //
     "makefile.launchConfigurations": [
         {
