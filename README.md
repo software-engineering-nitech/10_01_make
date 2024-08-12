@@ -24,3 +24,16 @@ docker compose exec mygcc make clean
 ```bash
 docker compose down
 ```
+
+
+shared library
+
+```bash
+./main
+LD_LIBRARY_PATH=./dummy_lib/lib/opencv/:$LD_LIBRARY_PATH ./main
+LD_LIBRARY_PATH=./dummy_lib/lib/pcl/:$LD_LIBRARY_PATH ./main
+
+ldd ./main
+LD_LIBRARY_PATH=./dummy_lib/lib/opencv/:$LD_LIBRARY_PATH ldd ./main
+LD_LIBRARY_PATH=./dummy_lib/lib/pcl/:$LD_LIBRARY_PATH ldd ./main
+```

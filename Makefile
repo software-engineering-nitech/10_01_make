@@ -1,7 +1,13 @@
+.PHONY: all clean
+
+all: main
+
 OBJS = main.o myfunc.o
 
 main: $(OBJS)
-	gcc $(OBJS) -o main $(LDFLAGS)
+	gcc $(OBJS) -o main $(LDFLAGS) \
+	-L./dummy_lib/lib/opencv/ \
+	-lopencv_or_pcl
 
 LIBS := -lm -lpcl -lopencv
 LIBDIRS := -L/usr/local/lib -L/usr/local/lib/cv2
@@ -15,7 +21,5 @@ CFLAGS := $(INCLUDE) $(CFLAGS)
 %.o: %.c
 	gcc $(CFLAGS) -c $< -o $@
 
-.PHONY: all clean
-all: main
 clean:
 	rm -f main $(OBJS)
